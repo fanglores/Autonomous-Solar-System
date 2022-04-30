@@ -1,0 +1,8 @@
+#build image
+sudo docker image build --file OpenCV.Dockerfile --tag opencv .
+
+#start container
+sudo docker run -it -v /home/user/"Рабочий стол"/Practics/shared:/workspace --rm opencv bash
+
+#open second terminal:
+sudo docker exec -it -v /home/user/"Рабочий стол"/Practics/shared:/workspace --rm opencv bash
