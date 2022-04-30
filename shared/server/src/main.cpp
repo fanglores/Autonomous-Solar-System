@@ -7,11 +7,15 @@
 int main()
 {   
 	std::cout << "Hello, docker!!!" << std::endl;
-
-	System solauticSystem;
+	
+	//system init
+	System solauticSystem(new Camera(), new Generator(new UDPExchanger()));
+	
+	//event monitor init
 	IEvent* eventReceiver = new ConsoleEvent();
 	Event event = Event::NONE;
-
+	
+	//get it into event parser
 	while (event != Event::EXIT)
 	{
 		event = eventReceiver->getEvent();
@@ -36,9 +40,6 @@ int main()
 				if(solauticSystem.TurnOff() == 0) std::cerr << "[INFO] System has stopped successful" << std::endl;
 				else std::cerr << "[INFO] Error while stopping the system" << std::endl;
 				std::exit(0);
-				break;
-			case (Event::SWITCHGENERATOR):
-				solauticSystem.switchGenerator();
 				break;
 			
 			default:

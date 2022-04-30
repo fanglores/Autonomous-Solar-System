@@ -16,7 +16,7 @@ public:
 	virtual int Connect() const = 0;
 	virtual int Send(char* data) = 0;
 	virtual char* Receive() = 0;
-	virtual ~Client();
+	virtual ~IExchanger();
 };
 
 
@@ -24,7 +24,7 @@ public:
 class UDPExchanger : public IExchanger
 {
 public:
-	UDPClient();
+	UDPExchanger();
 	int Connect() const override;
 	int Send(char* data) override;
 	char* Receive() override;
@@ -35,8 +35,9 @@ public:
 class TCPExchanger : public IExchanger
 {
 public:
-	TCPClient();
+	TCPExchanger();
 	int Connect() const override;
 	int Send(char* data) override;
 	char* Receive() override;
+
 };

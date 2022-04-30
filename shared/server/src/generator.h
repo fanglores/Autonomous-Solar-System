@@ -1,23 +1,15 @@
 #pragma once
 
-#include "../../entity/client.h"
-
-enum class GeneratorState
-{
-    STARTING,
-	RUNNING,
-    STOPPING,
-    STOPPED,
-	ERROR
-};
+#include "../../entity/generatorEntity.h"
+#include "../../entity/SocketsExchanger.h"
 
 class Generator
 {
 private:
-	Client* commandExchanger;
+	IExchanger* commandExchanger;
 	GeneratorState state;
 public:
-	Generator(Client* ce);
+	Generator(IExchanger* ce);
 	~Generator();
 
 	int Start();

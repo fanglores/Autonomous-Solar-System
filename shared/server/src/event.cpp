@@ -9,8 +9,6 @@ Event IEvent::getEvent()
 	if (inputEvent == '0') return Event::PRESSED_STOP;
 	if (inputEvent == 'q') return Event::EXIT;
 	
-	if (inputEvent == 'g') return Event::SWITCHGENERATOR;
-	
 	if (inputEvent == ' ') return Event::NONE;
 
 	return Event::NONE;

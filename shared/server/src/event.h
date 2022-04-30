@@ -5,8 +5,7 @@ enum class Event
 	NONE,
 	PRESSED_START,
 	PRESSED_STOP,
-	EXIT,
-	SWITCHGENERATOR
+	EXIT
 };
 
 class IEvent

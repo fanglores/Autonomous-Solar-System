@@ -1,6 +1,6 @@
 #pragma once
 
-#include "client.h"
+#include "../../entity/SocketsExchanger.h"
 
 enum class GeneratorState
 {	

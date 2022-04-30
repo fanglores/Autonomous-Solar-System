@@ -1,4 +1,4 @@
-#include "../../entity/client.h"
+#include "../../entity/SocketsExchanger.h"
 
 //#include <unistd.h>
 #include <iostream>
@@ -7,10 +7,10 @@ using namespace std;
 
 int main()
 {
-  Client* cli = new UDPClient();
+  IExchanger* commandExchanger = new UDPExchanger();
 
   while(1) 
   {
-    cout << cli->Receive() << endl;
+    cout << commandExchanger->Receive() << endl;
   }
 }

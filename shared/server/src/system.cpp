@@ -1,15 +1,21 @@
 #include "system.h"
 
-System::System() : state(SystemState::OFF) {}
+System::System(Camera* cp, Generator* gp) : camera(cp), generator(gp), state(SystemState::OFF) {}
 
-int System::switchGenerator()
-{	
-	//add return values
-	GeneratorState cs = generator.getState();
-	if(cs == GeneratorState::STOPPED) generator.Start();
-	else if(cs == GeneratorState::RUNNING) generator.Stop();
-	else if(cs == GeneratorState::ERROR) std::cerr << "[ERROR] Generator error" << std::endl;
-	else std::cerr << "[WARNING] Generator isn`t ready" << std::endl;
+int System::Run()
+{
+	try
+	{
+		//if sun will be closed soon-/-else
+		if(true) generator->Start();
+		else generator->Stop();
+		
+		return 0;
+	}
+	catch(...)
+	{
+		return -1;
+	}
 }
 
 //full coverage is ready
@@ -89,7 +95,7 @@ int System::updatePhoto()
 	try
 	{
 		previousPhoto = currentPhoto;
-		currentPhoto = camera.getPhoto();
+		currentPhoto = camera->getPhoto();
 
 		return 0;
 	}

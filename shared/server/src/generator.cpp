@@ -1,20 +1,23 @@
 #include "generator.h"
 
-Generator::Generator(Client* ce) : commandExchanger(ce)
+Generator::Generator(IExchanger* ce) : commandExchanger(ce)
 {	
-  state = getState();
+	state = getState();
 }
 
 Generator::~Generator()
 {
-	
+	delete commandExchanger;
 }
 
-GeneratorState Generator::getState() const
+GeneratorState Generator::getState()
 {
-	char* buf = commandExchanger->Send("get state cmd");
-
-	state = int(buf);
+	char* cmd = new char(static_cast<char>(GeneratorCommand::GET_STATE));
+	commandExchanger->Send(cmd);
+	
+	char* buf = commandExchanger->Receive();
+	
+	state = static_cast<GeneratorState>(*buf);
 	return state;
 }
 
@@ -22,17 +25,11 @@ int Generator::Start()
 {
 	try
 	{
-		state = GeneratorState::STARTING;
-
-		//some starting operations here
-		commandExchanger->Send("1");
-
-		state = GeneratorState::RUNNING;
+		commandExchanger->Send(new char('1'));
 		return 0;
 	}
 	catch(...)
 	{
-		state = GeneratorState::ERROR;
 		return -1;
 	}
 }
@@ -41,17 +38,11 @@ int Generator::Stop()
 {
 	try
 	{
-		state = GeneratorState::STOPPING;
-
-		//some stop operations here
-		commandExchanger->Send("0");
-
-		state = GeneratorState::STOPPED;
+		commandExchanger->Send(new char('0'));
 		return 0;
 	}
 	catch (...)
 	{
-		state = GeneratorState::ERROR;
 		return -1;
 	}
 }

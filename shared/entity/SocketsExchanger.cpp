@@ -2,6 +2,8 @@
 
 #include <sys/types.h>
 #include <sys/socket.h>
+#include <unistd.h>
+
 #include <iostream>
 using namespace std;
 
@@ -11,7 +13,7 @@ IExchanger::~IExchanger()
 	delete[] buf;
 }
 
-UDPClient::UDPClient()
+UDPExchanger::UDPExchanger()
 {
 	sock = socket(AF_INET, SOCK_DGRAM, 0);
 
@@ -19,8 +21,6 @@ UDPClient::UDPClient()
 	addr.sin_port = htons(3425);
 	addr.sin_addr.s_addr = htonl(INADDR_ANY);
 }
-
-UDPExchanger::~IExchanger();
 
 int UDPExchanger::Connect() const
 {

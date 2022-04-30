@@ -19,20 +19,18 @@ enum class SystemState
 class System
 {
 private:
+	Camera* camera;
+	Generator* generator;
+	
 	SystemState state;
-
-    Camera camera;
-	Generator generator;
-
-    cv::Mat previousPhoto, currentPhoto;
-
-	int Init();
+	
+    	cv::Mat previousPhoto, currentPhoto;
 public:
-    System();
+    System(Camera* cp, Generator* gp);
 
-	int switchGenerator();
+	int Run();
 	int TurnOn();
 	int TurnOff();
-    int updatePhoto();
+    	int updatePhoto();
 };
 
