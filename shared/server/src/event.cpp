@@ -14,14 +14,25 @@ Event IEvent::getEvent()
 	return Event::NONE;
 }
 
+ConsoleEvent::ConsoleEvent()
+{
+	std::cerr << "[INPUT] Console input initiated!" << std::endl;
+}
+
 char ConsoleEvent::readEvent()
 {
 	char c;
-	std::cout << "Enter event: ";
+	std::cerr << "Enter event: ";
 	std::cin >> c;
 
 	return c;
 }
+
+TCPEvent::TCPEvent()
+{
+	std::cerr << "[INPUT] TCP input initiated!" << std::endl;
+}
+
 
 char TCPEvent::readEvent()
 {

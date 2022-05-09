@@ -18,12 +18,14 @@ public:
 class ConsoleEvent : public IEvent
 {
 public:
+	ConsoleEvent();
 	char readEvent() override;
 };
 
 class TCPEvent : public IEvent
 {
 public:
+	TCPEvent();
 	char readEvent() override;
 };
 

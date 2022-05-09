@@ -1,5 +1,34 @@
 #include "generator.h"
 
+IGenerator::IGenerator()
+{
+	state = GeneratorState::STOPPED;
+}
+
+//dummy generator code
+DummyGenerator::DummyGenerator()
+{
+	state = GeneratorState::STOPPED;
+}
+
+int DummyGenerator::Start()
+{
+	state = GeneratorState::RUNNING;
+	return 0;
+}
+
+int DummyGenerator::Stop()
+{
+	state = GeneratorState::STOPPED;
+	return 0;
+}
+
+GeneratorState DummyGenerator::getState()
+{
+	return state;
+}
+
+//main generator code
 Generator::Generator(IExchanger* ce) : commandExchanger(ce)
 {	
 	state = getState();

@@ -1,19 +1,42 @@
 #pragma once
 
-#include "../../entity/generatorEntity.h"
-#include "../../entity/SocketsExchanger.h"
+#include "../../common/generatorEntity.h"
+#include "../../common/SocketsExchanger.h"
 
-class Generator
+class IGenerator
+{
+protected:
+	GeneratorState state;
+public:
+	IGenerator();
+
+	virtual int Start() = 0;
+	virtual int Stop() = 0;
+	
+	virtual GeneratorState getState() = 0;
+};
+
+class DummyGenerator : public IGenerator
+{
+public:
+	DummyGenerator();
+
+	int Start() override;
+	int Stop() override;
+	
+	GeneratorState getState() override;
+};
+
+class Generator : public IGenerator
 {
 private:
 	IExchanger* commandExchanger;
-	GeneratorState state;
 public:
 	Generator(IExchanger* ce);
 	~Generator();
 
-	int Start();
-	int Stop();
+	int Start() override;
+	int Stop() override;
 
-	GeneratorState getState();
+	GeneratorState getState() override;
 };

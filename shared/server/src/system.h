@@ -2,6 +2,7 @@
 
 #include <opencv2/opencv.hpp>
 
+#include "event.h"
 #include "camera.h"
 #include "generator.h"
 
@@ -20,14 +21,15 @@ class System
 {
 private:
 	Camera* camera;
-	Generator* generator;
+	IGenerator* generator;
 	
 	SystemState state;
 	
     	cv::Mat previousPhoto, currentPhoto;
 public:
-    System(Camera* cp, Generator* gp);
-
+    System(Camera* cp, IGenerator* gp);
+	
+	void processEvent(const Event& event);
 	int Run();
 	int TurnOn();
 	int TurnOff();

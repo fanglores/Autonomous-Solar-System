@@ -1,5 +1,5 @@
 project(SolauticSystem)
 
-set(HEADERS "../entity/SocketsExchanger.h" "../entity/SocketsExchanger.cpp")
+set(HEADERS "../common/SocketsExchanger.h" "../common/SocketsExchanger.cpp")
 
 add_executable(client "src/main.cpp" "${HEADERS}")

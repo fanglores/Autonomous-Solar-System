@@ -1,6 +1,6 @@
 project( SolauticSystem )
 
-set( HEADER_FILES "../entity/SocketsExchanger.h" "../entity/SocketsExchanger.cpp" "src/event.h" "src/event.cpp" "src/system.h" "src/system.cpp" "src/camera.h" "src/camera.cpp" "src/generator.h" "src/generator.cpp" )
+set( HEADER_FILES "../common/SocketsExchanger.h" "../common/SocketsExchanger.cpp" "src/event.h" "src/event.cpp" "src/system.h" "src/system.cpp" "src/camera.h" "src/camera.cpp" "src/generator.h" "src/generator.cpp" )
 
 add_executable( server "src/main.cpp" ${HEADER_FILES})
 
