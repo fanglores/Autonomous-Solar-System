@@ -1,16 +1,18 @@
 #include "../../common/SocketsExchanger.h"
 
-//#include <unistd.h>
+#include "generator.h"
 #include <iostream>
 using namespace std;
 
 
 int main()
 {
-  IExchanger* commandExchanger = new UDPExchanger();
-
-  while(1) 
-  {
-    cout << commandExchanger->Receive() << endl;
-  }
+	IGenerator* generator = new Generator(new UDPExchanger());
+	
+	while(true) 
+	{
+		generator->runCommand();
+	}
+	
+	return 0;
 }

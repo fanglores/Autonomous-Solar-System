@@ -35,13 +35,19 @@ int UDPExchanger::Connect() const
 
 int UDPExchanger::Send(char* data)
 {
-
+	sendto(sock, data, sizeof(data), 0, (struct sockaddr *)&addr, sizeof(addr));
+	return 0;
 }
 
 char* UDPExchanger::Receive()
 {
-	bytes_read = recvfrom(sock, buf, MSG_SIZE, 0, NULL, NULL);
-	buf[bytes_read] = '\0';
+	bytes_read = 0;
+	
+	while(bytes_read == 0)
+	{
+		bytes_read = recvfrom(sock, buf, MSG_SIZE, 0, NULL, NULL);
+		buf[bytes_read] = '\0';
+	}
 	
 	return buf;
 }

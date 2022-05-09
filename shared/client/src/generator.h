@@ -1,31 +1,22 @@
 #pragma once
 
+#include "../../common/generatorEntity.h"
 #include "../../common/SocketsExchanger.h"
-
-enum class GeneratorState
-{	
-	STARTING,
-	RUNNING,
-	STOPPING,
-	STOPPED,
-	ERROR
-};
 
 class IGenerator
 {
 protected:
-	Client* commandExchanger;
+	IExchanger* commandExchanger;
 	GeneratorState state;
 public:
-	IGenerator(Client* cr);
-	virtual int getCommand() = 0;
+	virtual void runCommand() = 0;
 	virtual int sendState() const = 0;
 };
 
 class Generator : public IGenerator
 {
 public:
-	Generator();
-	int getCommand();
-	int sendState() const;
+	Generator(IExchanger* cr);
+	void runCommand() override;
+	int sendState() const override;
 };

@@ -1,18 +1,28 @@
 #include "generator.h"
 
-IGenerator::IGenerator(Client* cr) : commandExchanger(cr), state(GeneratorState::STOPPED)
-{}
-
-Generator::Generator(Client* cr) : commandExchanger(cr), state(GeneratorState::STOPPED)
-{}
-
-int Generator::getCommand()
+Generator::Generator(IExchanger* cr) : commandExchanger(cr)
 {
-	char* cmd = commandExchanger->Receive();
+	state = GeneratorState::STOPPED;
+}
 
-	//process command
+void Generator::runCommand()
+{
+	const char* cmd = commandExchanger->Receive();
 
-	return 0;
+	switch(*cmd)
+	{
+		case '1':
+			//turn on
+			break;
+		case '0':
+			//turn off
+			break;
+		case 'g':
+			this->sendState();
+			break;
+		default:
+			break;
+	}
 }
 
 int Generator::sendState() const
