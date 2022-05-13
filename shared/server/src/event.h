@@ -5,7 +5,10 @@ enum class Event
 	NONE,
 	PRESSED_START,
 	PRESSED_STOP,
-	EXIT
+	EXIT,
+	DEBUG_TURN_ON,
+	DEBUG_TURN_OFF,
+	DEBUG_PRINT_STATES
 };
 
 class IEvent

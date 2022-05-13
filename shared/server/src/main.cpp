@@ -6,11 +6,11 @@
 //***********************************main.cpp*********************************
 int main()
 {   
-	std::cout << "Hello, docker!!!" << std::endl;
+	std::cout << "Hello, docker_opencv!!!" << std::endl;
 	
 	//system init
-	//System* solauticSystem = new System(new Camera(), new Generator(new UDPExchanger()));
-	System* solauticSystem = new System(new Camera(), new DummyGenerator());
+	System* solauticSystem = new System(new Camera(), new Generator(new UDPExchanger('s')));	//uses udp command exchange
+	//System* solauticSystem = new System(new Camera(), new DummyGenerator());	//uses console input
 	
 	//event monitor init
 	IEvent* eventReceiver = new ConsoleEvent();

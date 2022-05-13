@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-	IGenerator* generator = new Generator(new UDPExchanger());
+	IGenerator* generator = new Generator(new UDPExchanger('c'));
 	
 	while(true) 
 	{

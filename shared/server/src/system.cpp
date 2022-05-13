@@ -51,6 +51,18 @@ void System::processEvent(const Event& event)
 			std::exit(0);
 			break;
 		
+		case (Event::DEBUG_TURN_ON):
+			std::cerr << "[DEBUG] Starting the generator" << std::endl;
+			generator->turnOn();
+			break;
+		case (Event::DEBUG_TURN_OFF):
+			std::cerr << "[DEBUG] Stopping the generator" << std::endl;
+			generator->turnOff();
+			break;
+		case (Event::DEBUG_PRINT_STATES):
+			std::cerr << "[DEBUG] Current generator state: " << static_cast<int>(generator->getState()) << std::endl;
+			break;
+		
 		case (Event::NONE):
 			this->Run();
 			break;

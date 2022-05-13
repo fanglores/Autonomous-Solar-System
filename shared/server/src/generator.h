@@ -10,8 +10,8 @@ protected:
 public:
 	IGenerator();
 
-	virtual int Start() = 0;
-	virtual int Stop() = 0;
+	virtual int turnOn() = 0;
+	virtual int turnOff() = 0;
 	
 	virtual GeneratorState getState() = 0;
 };
@@ -21,8 +21,8 @@ class DummyGenerator : public IGenerator
 public:
 	DummyGenerator();
 
-	int Start() override;
-	int Stop() override;
+	int turnOn() override;
+	int turnOff() override;
 	
 	GeneratorState getState() override;
 };
@@ -35,8 +35,8 @@ public:
 	Generator(IExchanger* ce);
 	~Generator();
 
-	int Start() override;
-	int Stop() override;
+	int turnOn() override;
+	int turnOff() override;
 
 	GeneratorState getState() override;
 };

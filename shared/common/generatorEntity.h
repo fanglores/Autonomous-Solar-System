@@ -11,7 +11,7 @@ enum class GeneratorState
 
 enum class GeneratorCommand
 {
-    	START = '0',
-	STOP = '1',
+    	STOP = '0',
+	START = '1',
     	GET_STATE = 'g'
 };

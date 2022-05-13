@@ -1,5 +1,8 @@
 #include "generator.h"
 
+#include <iostream>
+using namespace std;
+
 IGenerator::IGenerator()
 {
 	state = GeneratorState::STOPPED;
@@ -11,13 +14,13 @@ DummyGenerator::DummyGenerator()
 	state = GeneratorState::STOPPED;
 }
 
-int DummyGenerator::Start()
+int DummyGenerator::turnOn()
 {
 	state = GeneratorState::RUNNING;
 	return 0;
 }
 
-int DummyGenerator::Stop()
+int DummyGenerator::turnOff()
 {
 	state = GeneratorState::STOPPED;
 	return 0;
@@ -31,30 +34,43 @@ GeneratorState DummyGenerator::getState()
 //main generator code
 Generator::Generator(IExchanger* ce) : commandExchanger(ce)
 {	
+	//commandExchanger->Connect();
 	state = getState();
 }
 
 Generator::~Generator()
 {
+	commandExchanger->Send(new char(static_cast<char>(GeneratorCommand::STOP));
 	delete commandExchanger;
 }
 
 GeneratorState Generator::getState()
 {
 	char* cmd = new char(static_cast<char>(GeneratorCommand::GET_STATE));
+	cerr << "[DEBUG] Server is sending char GET_STATE command:" << static_cast<int>(*cmd) << endl;
 	commandExchanger->Send(cmd);
 	
-	char* buf = commandExchanger->Receive();
+	try
+	{
+		char* buf = commandExchanger->Receive();
+		
+		state = static_cast<GeneratorState>(*buf);
+		cerr << "[DEBUG] Server recognized state as: " << static_cast<int>(state) << endl;
+	}
+	catch(...)
+	{
+		//if time limit for response is exceeded
+		state = GeneratorState::ERROR;
+	}
 	
-	state = static_cast<GeneratorState>(*buf);
 	return state;
 }
 
-int Generator::Start()
+int Generator::turnOn()
 {
 	try
 	{
-		commandExchanger->Send(new char('1'));
+		commandExchanger->Send(new char(static_cast<char>(GeneratorCommand::START)));
 		return 0;
 	}
 	catch(...)
@@ -63,11 +79,11 @@ int Generator::Start()
 	}
 }
 
-int Generator::Stop()
+int Generator::turnOff()
 {
 	try
 	{
-		commandExchanger->Send(new char('0'));
+		commandExchanger->Send(new char(static_cast<char>(GeneratorCommand::STOP)));
 		return 0;
 	}
 	catch (...)

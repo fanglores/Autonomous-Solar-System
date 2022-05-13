@@ -9,6 +9,10 @@ Event IEvent::getEvent()
 	if (inputEvent == '0') return Event::PRESSED_STOP;
 	if (inputEvent == 'q') return Event::EXIT;
 	
+	if (inputEvent == 'i') return Event::DEBUG_TURN_ON;
+	if (inputEvent == 'o') return Event::DEBUG_TURN_OFF;
+	if (inputEvent == 'p') return Event::DEBUG_PRINT_STATES;
+	
 	if (inputEvent == ' ') return Event::NONE;
 
 	return Event::NONE;
