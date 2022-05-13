@@ -33,7 +33,7 @@ int UDPExchanger::Connect() const
 	return 0;
 }
 
-int UDPExchanger::Send(char* data)
+int UDPExchanger::Send(const char* data)
 {
 	sendto(sock, data, sizeof(data), 0, (struct sockaddr *)&addr, sizeof(addr));
 	return 0;

@@ -14,7 +14,7 @@ protected:
 	int bytes_read;
 public:
 	virtual int Connect() const = 0;
-	virtual int Send(char* data) = 0;
+	virtual int Send(const char* data) = 0;
 	virtual char* Receive() = 0;
 	virtual ~IExchanger();
 };
@@ -26,7 +26,7 @@ class UDPExchanger : public IExchanger
 public:
 	UDPExchanger();
 	int Connect() const override;
-	int Send(char* data) override;
+	int Send(const char* data) override;
 	char* Receive() override;
 };
 
@@ -37,7 +37,7 @@ class TCPExchanger : public IExchanger
 public:
 	TCPExchanger();
 	int Connect() const override;
-	int Send(char* data) override;
+	int Send(const char* data) override;
 	char* Receive() override;
 
 };
