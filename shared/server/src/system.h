@@ -27,8 +27,8 @@ private:
 	
     	cv::Mat previousPhoto, currentPhoto;
 public:
-    System(Camera* cp, IGenerator* gp);
-	
+	System(Camera* cp, IGenerator* gp);
+
 	void processEvent(const Event& event);
 	int Run();
 	int TurnOn();

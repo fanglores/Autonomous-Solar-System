@@ -40,7 +40,7 @@ Generator::Generator(IExchanger* ce) : commandExchanger(ce)
 
 Generator::~Generator()
 {
-	commandExchanger->Send(new char(static_cast<char>(GeneratorCommand::STOP));
+	this->turnOff();
 	delete commandExchanger;
 }
 

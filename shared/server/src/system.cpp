@@ -48,6 +48,7 @@ void System::processEvent(const Event& event)
 			std::cerr << "[EXIT] Stopping the system" << std::endl;
 			if(this->TurnOff() == 0) std::cerr << "[INFO] System has stopped successful" << std::endl;
 			else std::cerr << "[INFO] Error while stopping the system" << std::endl;
+			generator->turnOff();
 			std::exit(0);
 			break;
 		
@@ -72,7 +73,6 @@ void System::processEvent(const Event& event)
 	}
 }
 
-//full coverage is ready
 int System::TurnOn()
 {
 	if (state == SystemState::WORKING)
@@ -108,7 +108,6 @@ int System::TurnOn()
 	}
 }
 
-//full coverage is ready
 int System::TurnOff() 
 {
 	if (state == SystemState::OFF)
