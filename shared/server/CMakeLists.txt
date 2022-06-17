@@ -4,5 +4,5 @@ set( HEADER_FILES "../common/SocketsExchanger.h" "../common/SocketsExchanger.cpp
 
 add_executable( server "src/main.cpp" ${HEADER_FILES})
 
-target_include_directories( server PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}" )
-target_link_libraries( server ${OpenCV_LIBS} )
+#target_include_directories( server PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}" )
+#target_link_libraries( server ${OpenCV_LIBS} )

@@ -1,0 +1,11 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.obj"
+  "EinitHw"
+  "EinitHw-kss/EinitHw.c"
+  "EinitHw.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/EinitHw.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

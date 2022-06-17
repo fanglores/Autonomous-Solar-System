@@ -3,6 +3,8 @@
 #include "camera.h"
 #include "generator.h"
 
+#include <iostream>
+
 //***********************************main.cpp*********************************
 int main()
 {   

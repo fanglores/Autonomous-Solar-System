@@ -14,7 +14,9 @@ Event IEvent::getEvent()
 	if (inputEvent == 'p') return Event::DEBUG_PRINT_STATES;
 	
 	if (inputEvent == ' ') return Event::NONE;
-
+	
+	std::cerr << "[WARNING] Event is unknown" << std::endl;
+	
 	return Event::NONE;
 }
 

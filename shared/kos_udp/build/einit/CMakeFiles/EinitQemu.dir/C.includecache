@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/workspace/net2_with_separate_vfs_udp_modified/build/einit/EinitQemu-kss/EinitQemu.c
+stdlib.h
+-
+stdio.h
+-
+rtl/retcode.h
+-
+coresrv/entity/entity_api.h
+-
+services/handle/if_connection.h
+-
+env/env.h
+-
+

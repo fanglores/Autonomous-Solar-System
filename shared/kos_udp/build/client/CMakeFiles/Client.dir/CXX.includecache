@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/workspace/net2_with_separate_vfs_udp_modified/client/src/client.cpp
+netdb.h
+-
+stdio.h
+-
+stdlib.h
+-
+sys/socket.h
+-
+sys/types.h
+-
+sys/mount.h
+-
+sys/stat.h
+-
+sys/types.h
+-
+platform/platform.h
+-
+kos_net.h
+-
+

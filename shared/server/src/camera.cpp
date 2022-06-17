@@ -1,12 +1,14 @@
 #include "camera.h"
 
-Camera::Camera() : camera(cv::VideoCapture(0))
+Camera::Camera() //: camera(cv::VideoCapture(0))
 {}
 
-cv::Mat Camera::getPhoto()
+//cv::Mat
+int Camera::getPhoto()
 {
-	cv::Mat frame;
-	camera >> frame;
+	int frame;
+	//cv::Mat frame;
+	//camera >> frame;
 	
 	return frame;
 }

@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=gnu++11 -Wall -Wundef -Wformat -Wno-shadow -Wcast-qual -Wcast-align -Wpointer-arith -Wconversion -Wsequence-point -Werror=return-type -fvisibility=hidden -fvisibility-inlines-hidden -fcommon -fno-threadsafe-statics -fno-omit-frame-pointer -fno-exceptions -fno-check-new -frtti -g  -static-libgcc  CMakeFiles/server.dir/src/server.cpp.o  -o server 

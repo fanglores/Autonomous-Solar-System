@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/workspace/net2_with_separate_vfs_udp_modified/vfs/src/net_vfs.c
+coresrv/fs/fs_api.h
+-
+coresrv/handle/handle_api.h
+-
+services/fs/FS.idl.h
+-
+vfs/basic.h
+-
+assert.h
+-
+errno.h
+-
+stdbool.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+fcntl.h
+-
+unistd.h
+-
+sys/mount.h
+-
+

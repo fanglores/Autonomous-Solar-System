@@ -1,4 +1,5 @@
 #include "system.h"
+#include <iostream>
 
 System::System(Camera* cp, IGenerator* gp) : camera(cp), generator(gp), state(SystemState::OFF) {}
 

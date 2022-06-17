@@ -1,6 +1,6 @@
 #pragma once
 
-#include <opencv2/opencv.hpp>
+//#include <opencv2/opencv.hpp>
 
 #include "event.h"
 #include "camera.h"
@@ -25,7 +25,8 @@ private:
 	
 	SystemState state;
 	
-    	cv::Mat previousPhoto, currentPhoto;
+	int previousPhoto, currentPhoto;
+    	//cv::Mat previousPhoto, currentPhoto;
 public:
 	System(Camera* cp, IGenerator* gp);
 
