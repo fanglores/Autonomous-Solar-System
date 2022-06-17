@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/workspace/net2_with_separate_vfs_udp_modified/build/einit/EinitHw-kss/EinitHw.c" "/workspace/net2_with_separate_vfs_udp_modified/build/einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.obj"
+  "/workspace/kos_udp/build/einit/EinitHw-kss/EinitHw.c" "/workspace/kos_udp/build/einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

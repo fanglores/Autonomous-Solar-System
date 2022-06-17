@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/workspace/net2_with_separate_vfs_udp_modified/vfs/src/net_vfs.c" "/workspace/net2_with_separate_vfs_udp_modified/build/vfs/CMakeFiles/NetVfs.dir/src/net_vfs.c.obj"
+  "/workspace/kos_udp/vfs/src/net_vfs.c" "/workspace/kos_udp/build/vfs/CMakeFiles/NetVfs.dir/src/net_vfs.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

@@ -68,10 +68,10 @@ RM = /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/net2_with_separate_vfs_udp_modified
+CMAKE_SOURCE_DIR = /workspace/kos_udp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/net2_with_separate_vfs_udp_modified/build
+CMAKE_BINARY_DIR = /workspace/kos_udp/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,14 +146,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles /workspace/net2_with_separate_vfs_udp_modified/build/einit/CMakeFiles/progress.marks
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles 0
+	cd /workspace/kos_udp/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspace/kos_udp/build/CMakeFiles /workspace/kos_udp/build/einit/CMakeFiles/progress.marks
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/kos_udp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/clean
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: cmake_check_build_system
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/preinstall
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/preinstall
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /workspace/kos_udp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 einit/CMakeFiles/gdb.dir/rule:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/gdb.dir/rule
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/gdb.dir/rule
 .PHONY : einit/CMakeFiles/gdb.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ gdb: einit/CMakeFiles/gdb.dir/rule
 
 # fast build rule for target.
 gdb/fast:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/gdb.dir/build.make einit/CMakeFiles/gdb.dir/build
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/gdb.dir/build.make einit/CMakeFiles/gdb.dir/build
 .PHONY : gdb/fast
 
 # Convenience name for target.
 einit/CMakeFiles/gdbsim.dir/rule:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/gdbsim.dir/rule
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/gdbsim.dir/rule
 .PHONY : einit/CMakeFiles/gdbsim.dir/rule
 
 # Convenience name for target.
@@ -203,12 +203,12 @@ gdbsim: einit/CMakeFiles/gdbsim.dir/rule
 
 # fast build rule for target.
 gdbsim/fast:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/gdbsim.dir/build.make einit/CMakeFiles/gdbsim.dir/build
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/gdbsim.dir/build.make einit/CMakeFiles/gdbsim.dir/build
 .PHONY : gdbsim/fast
 
 # Convenience name for target.
 einit/CMakeFiles/sim.dir/rule:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/sim.dir/rule
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/sim.dir/rule
 .PHONY : einit/CMakeFiles/sim.dir/rule
 
 # Convenience name for target.
@@ -218,12 +218,12 @@ sim: einit/CMakeFiles/sim.dir/rule
 
 # fast build rule for target.
 sim/fast:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/sim.dir/build.make einit/CMakeFiles/sim.dir/build
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/sim.dir/build.make einit/CMakeFiles/sim.dir/build
 .PHONY : sim/fast
 
 # Convenience name for target.
 einit/CMakeFiles/EinitHw.dir/rule:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitHw.dir/rule
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitHw.dir/rule
 .PHONY : einit/CMakeFiles/EinitHw.dir/rule
 
 # Convenience name for target.
@@ -233,12 +233,12 @@ EinitHw: einit/CMakeFiles/EinitHw.dir/rule
 
 # fast build rule for target.
 EinitHw/fast:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw.dir/build.make einit/CMakeFiles/EinitHw.dir/build
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw.dir/build.make einit/CMakeFiles/EinitHw.dir/build
 .PHONY : EinitHw/fast
 
 # Convenience name for target.
 einit/CMakeFiles/EinitHw-edl.dir/rule:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitHw-edl.dir/rule
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitHw-edl.dir/rule
 .PHONY : einit/CMakeFiles/EinitHw-edl.dir/rule
 
 # Convenience name for target.
@@ -248,12 +248,12 @@ EinitHw-edl: einit/CMakeFiles/EinitHw-edl.dir/rule
 
 # fast build rule for target.
 EinitHw-edl/fast:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw-edl.dir/build.make einit/CMakeFiles/EinitHw-edl.dir/build
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw-edl.dir/build.make einit/CMakeFiles/EinitHw-edl.dir/build
 .PHONY : EinitHw-edl/fast
 
 # Convenience name for target.
 einit/CMakeFiles/kos-image.dir/rule:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/kos-image.dir/rule
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/kos-image.dir/rule
 .PHONY : einit/CMakeFiles/kos-image.dir/rule
 
 # Convenience name for target.
@@ -263,12 +263,12 @@ kos-image: einit/CMakeFiles/kos-image.dir/rule
 
 # fast build rule for target.
 kos-image/fast:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/kos-image.dir/build.make einit/CMakeFiles/kos-image.dir/build
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/kos-image.dir/build.make einit/CMakeFiles/kos-image.dir/build
 .PHONY : kos-image/fast
 
 # Convenience name for target.
 einit/CMakeFiles/kos-qemu-image.dir/rule:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/kos-qemu-image.dir/rule
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/kos-qemu-image.dir/rule
 .PHONY : einit/CMakeFiles/kos-qemu-image.dir/rule
 
 # Convenience name for target.
@@ -278,12 +278,12 @@ kos-qemu-image: einit/CMakeFiles/kos-qemu-image.dir/rule
 
 # fast build rule for target.
 kos-qemu-image/fast:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/kos-qemu-image.dir/build.make einit/CMakeFiles/kos-qemu-image.dir/build
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/kos-qemu-image.dir/build.make einit/CMakeFiles/kos-qemu-image.dir/build
 .PHONY : kos-qemu-image/fast
 
 # Convenience name for target.
 einit/CMakeFiles/EinitQemu-edl.dir/rule:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitQemu-edl.dir/rule
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitQemu-edl.dir/rule
 .PHONY : einit/CMakeFiles/EinitQemu-edl.dir/rule
 
 # Convenience name for target.
@@ -293,12 +293,12 @@ EinitQemu-edl: einit/CMakeFiles/EinitQemu-edl.dir/rule
 
 # fast build rule for target.
 EinitQemu-edl/fast:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu-edl.dir/build.make einit/CMakeFiles/EinitQemu-edl.dir/build
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu-edl.dir/build.make einit/CMakeFiles/EinitQemu-edl.dir/build
 .PHONY : EinitQemu-edl/fast
 
 # Convenience name for target.
 einit/CMakeFiles/EinitQemu.dir/rule:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitQemu.dir/rule
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitQemu.dir/rule
 .PHONY : einit/CMakeFiles/EinitQemu.dir/rule
 
 # Convenience name for target.
@@ -308,7 +308,7 @@ EinitQemu: einit/CMakeFiles/EinitQemu.dir/rule
 
 # fast build rule for target.
 EinitQemu/fast:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu.dir/build.make einit/CMakeFiles/EinitQemu.dir/build
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu.dir/build.make einit/CMakeFiles/EinitQemu.dir/build
 .PHONY : EinitQemu/fast
 
 EinitHw-kss/EinitHw.obj: EinitHw-kss/EinitHw.c.obj
@@ -317,7 +317,7 @@ EinitHw-kss/EinitHw.obj: EinitHw-kss/EinitHw.c.obj
 
 # target to build an object file
 EinitHw-kss/EinitHw.c.obj:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw.dir/build.make einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.obj
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw.dir/build.make einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.obj
 .PHONY : EinitHw-kss/EinitHw.c.obj
 
 EinitHw-kss/EinitHw.i: EinitHw-kss/EinitHw.c.i
@@ -326,7 +326,7 @@ EinitHw-kss/EinitHw.i: EinitHw-kss/EinitHw.c.i
 
 # target to preprocess a source file
 EinitHw-kss/EinitHw.c.i:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw.dir/build.make einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.i
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw.dir/build.make einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.i
 .PHONY : EinitHw-kss/EinitHw.c.i
 
 EinitHw-kss/EinitHw.s: EinitHw-kss/EinitHw.c.s
@@ -335,7 +335,7 @@ EinitHw-kss/EinitHw.s: EinitHw-kss/EinitHw.c.s
 
 # target to generate assembly for a file
 EinitHw-kss/EinitHw.c.s:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw.dir/build.make einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.s
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw.dir/build.make einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.s
 .PHONY : EinitHw-kss/EinitHw.c.s
 
 EinitQemu-kss/EinitQemu.obj: EinitQemu-kss/EinitQemu.c.obj
@@ -344,7 +344,7 @@ EinitQemu-kss/EinitQemu.obj: EinitQemu-kss/EinitQemu.c.obj
 
 # target to build an object file
 EinitQemu-kss/EinitQemu.c.obj:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu.dir/build.make einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.obj
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu.dir/build.make einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.obj
 .PHONY : EinitQemu-kss/EinitQemu.c.obj
 
 EinitQemu-kss/EinitQemu.i: EinitQemu-kss/EinitQemu.c.i
@@ -353,7 +353,7 @@ EinitQemu-kss/EinitQemu.i: EinitQemu-kss/EinitQemu.c.i
 
 # target to preprocess a source file
 EinitQemu-kss/EinitQemu.c.i:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu.dir/build.make einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.i
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu.dir/build.make einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.i
 .PHONY : EinitQemu-kss/EinitQemu.c.i
 
 EinitQemu-kss/EinitQemu.s: EinitQemu-kss/EinitQemu.c.s
@@ -362,7 +362,7 @@ EinitQemu-kss/EinitQemu.s: EinitQemu-kss/EinitQemu.c.s
 
 # target to generate assembly for a file
 EinitQemu-kss/EinitQemu.c.s:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu.dir/build.make einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.s
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu.dir/build.make einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.s
 .PHONY : EinitQemu-kss/EinitQemu.c.s
 
 # Help Target
@@ -403,6 +403,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /workspace/kos_udp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

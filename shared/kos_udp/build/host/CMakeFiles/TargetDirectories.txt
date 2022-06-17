@@ -1,5 +1,5 @@
-/workspace/net2_with_separate_vfs_udp_modified/build/host/CMakeFiles/rebuild_cache.dir
-/workspace/net2_with_separate_vfs_udp_modified/build/host/CMakeFiles/edit_cache.dir
-/workspace/net2_with_separate_vfs_udp_modified/build/host/server/CMakeFiles/rebuild_cache.dir
-/workspace/net2_with_separate_vfs_udp_modified/build/host/server/CMakeFiles/server.dir
-/workspace/net2_with_separate_vfs_udp_modified/build/host/server/CMakeFiles/edit_cache.dir
+/workspace/kos_udp/build/host/CMakeFiles/rebuild_cache.dir
+/workspace/kos_udp/build/host/CMakeFiles/edit_cache.dir
+/workspace/kos_udp/build/host/server/CMakeFiles/rebuild_cache.dir
+/workspace/kos_udp/build/host/server/CMakeFiles/server.dir
+/workspace/kos_udp/build/host/server/CMakeFiles/edit_cache.dir

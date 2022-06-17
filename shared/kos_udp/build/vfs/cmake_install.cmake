@@ -1,8 +1,8 @@
-# Install script for directory: /workspace/net2_with_separate_vfs_udp_modified/vfs
+# Install script for directory: /workspace/kos_udp/vfs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/workspace/net2_with_separate_vfs_udp_modified/build/../install")
+  set(CMAKE_INSTALL_PREFIX "/workspace/kos_udp/build/../install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,8 +34,8 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xnk_headersx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/vfs" TYPE FILE FILES
-    "/workspace/net2_with_separate_vfs_udp_modified/build/_headers_/vfs/../vfs/NetVfs.edl"
-    "/workspace/net2_with_separate_vfs_udp_modified/build/_headers_/vfs/../vfs/NetVfs.edl.h"
+    "/workspace/kos_udp/build/_headers_/vfs/../vfs/NetVfs.edl"
+    "/workspace/kos_udp/build/_headers_/vfs/../vfs/NetVfs.edl.h"
     )
 endif()
 

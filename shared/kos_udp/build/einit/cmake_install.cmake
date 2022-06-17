@@ -1,8 +1,8 @@
-# Install script for directory: /workspace/net2_with_separate_vfs_udp_modified/einit
+# Install script for directory: /workspace/kos_udp/einit
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/workspace/net2_with_separate_vfs_udp_modified/build/../install")
+  set(CMAKE_INSTALL_PREFIX "/workspace/kos_udp/build/../install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

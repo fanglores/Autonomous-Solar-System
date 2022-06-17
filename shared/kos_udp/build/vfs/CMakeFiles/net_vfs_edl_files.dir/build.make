@@ -63,10 +63,10 @@ RM = /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/net2_with_separate_vfs_udp_modified
+CMAKE_SOURCE_DIR = /workspace/kos_udp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/net2_with_separate_vfs_udp_modified/build
+CMAKE_BINARY_DIR = /workspace/kos_udp/build
 
 # Include any dependencies generated for this target.
 include vfs/CMakeFiles/net_vfs_edl_files.dir/depend.make
@@ -78,16 +78,16 @@ include vfs/CMakeFiles/net_vfs_edl_files.dir/progress.make
 include vfs/CMakeFiles/net_vfs_edl_files.dir/flags.make
 
 _headers_/vfs/NetVfs.edl.h: vfs/NetVfs.edl.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../_headers_/vfs/NetVfs.edl.h"
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/vfs && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/cmake -E copy /workspace/net2_with_separate_vfs_udp_modified/build/vfs/NetVfs.edl.h /workspace/net2_with_separate_vfs_udp_modified/build/_headers_/vfs/../vfs/NetVfs.edl.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/kos_udp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../_headers_/vfs/NetVfs.edl.h"
+	cd /workspace/kos_udp/build/vfs && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/cmake -E copy /workspace/kos_udp/build/vfs/NetVfs.edl.h /workspace/kos_udp/build/_headers_/vfs/../vfs/NetVfs.edl.h
 
 vfs/NetVfs.edl.h: _headers_/vfs/NetVfs.edl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating NetVfs.edl.h"
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/vfs && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/nk-gen-c -I /workspace/net2_with_separate_vfs_udp_modified/build/_headers_ -I /workspace/net2_with_separate_vfs_udp_modified/build/_headers_/client/.. -I /workspace/net2_with_separate_vfs_udp_modified/build/../install/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/arm-kos/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/include -P /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/include/system.platform -I /workspace/net2_with_separate_vfs_udp_modified/build/_headers_/vfs/../vfs /workspace/net2_with_separate_vfs_udp_modified/build/_headers_/vfs/../vfs/NetVfs.edl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/kos_udp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating NetVfs.edl.h"
+	cd /workspace/kos_udp/build/vfs && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/nk-gen-c -I /workspace/kos_udp/build/_headers_ -I /workspace/kos_udp/build/_headers_/client/.. -I /workspace/kos_udp/build/../install/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/arm-kos/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/include -P /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/include/system.platform -I /workspace/kos_udp/build/_headers_/vfs/../vfs /workspace/kos_udp/build/_headers_/vfs/../vfs/NetVfs.edl
 
 _headers_/vfs/NetVfs.edl: ../resources/edl/NetVfs.edl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating ../_headers_/vfs/NetVfs.edl"
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/vfs && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/cmake -E copy /workspace/net2_with_separate_vfs_udp_modified/resources/edl/NetVfs.edl /workspace/net2_with_separate_vfs_udp_modified/build/_headers_/vfs/../vfs/NetVfs.edl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/kos_udp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating ../_headers_/vfs/NetVfs.edl"
+	cd /workspace/kos_udp/build/vfs && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/cmake -E copy /workspace/kos_udp/resources/edl/NetVfs.edl /workspace/kos_udp/build/_headers_/vfs/../vfs/NetVfs.edl
 
 net_vfs_edl_files: vfs/CMakeFiles/net_vfs_edl_files.dir/build.make
 
@@ -99,12 +99,12 @@ vfs/CMakeFiles/net_vfs_edl_files.dir/build: net_vfs_edl_files
 .PHONY : vfs/CMakeFiles/net_vfs_edl_files.dir/build
 
 vfs/CMakeFiles/net_vfs_edl_files.dir/clean:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/vfs && $(CMAKE_COMMAND) -P CMakeFiles/net_vfs_edl_files.dir/cmake_clean.cmake
+	cd /workspace/kos_udp/build/vfs && $(CMAKE_COMMAND) -P CMakeFiles/net_vfs_edl_files.dir/cmake_clean.cmake
 .PHONY : vfs/CMakeFiles/net_vfs_edl_files.dir/clean
 
 vfs/CMakeFiles/net_vfs_edl_files.dir/depend: _headers_/vfs/NetVfs.edl.h
 vfs/CMakeFiles/net_vfs_edl_files.dir/depend: vfs/NetVfs.edl.h
 vfs/CMakeFiles/net_vfs_edl_files.dir/depend: _headers_/vfs/NetVfs.edl
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/net2_with_separate_vfs_udp_modified /workspace/net2_with_separate_vfs_udp_modified/vfs /workspace/net2_with_separate_vfs_udp_modified/build /workspace/net2_with_separate_vfs_udp_modified/build/vfs /workspace/net2_with_separate_vfs_udp_modified/build/vfs/CMakeFiles/net_vfs_edl_files.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspace/kos_udp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/kos_udp /workspace/kos_udp/vfs /workspace/kos_udp/build /workspace/kos_udp/build/vfs /workspace/kos_udp/build/vfs/CMakeFiles/net_vfs_edl_files.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : vfs/CMakeFiles/net_vfs_edl_files.dir/depend
 

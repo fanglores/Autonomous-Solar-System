@@ -4,7 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/workspace/net2_with_separate_vfs_udp_modified/client/src/client.cpp" "/workspace/net2_with_separate_vfs_udp_modified/build/client/CMakeFiles/Client.dir/src/client.cpp.obj"
+  "/workspace/kos_udp/common/SocketsExchanger.cpp" "/workspace/kos_udp/build/client/CMakeFiles/Client.dir/__/common/SocketsExchanger.cpp.obj"
+  "/workspace/kos_udp/client/src/client.cpp" "/workspace/kos_udp/build/client/CMakeFiles/Client.dir/src/client.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

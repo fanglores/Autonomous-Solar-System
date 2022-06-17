@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/workspace/net2_with_separate_vfs_udp_modified/client/src/client.cpp
+/workspace/kos_udp/client/src/client.cpp
 netdb.h
 -
 stdio.h
@@ -26,5 +26,11 @@ sys/types.h
 platform/platform.h
 -
 kos_net.h
+-
+../../common/SocketsExchanger.h
+/workspace/kos_udp/common/SocketsExchanger.h
+
+/workspace/kos_udp/common/SocketsExchanger.h
+netinet/in.h
 -
 

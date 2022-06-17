@@ -63,10 +63,10 @@ RM = /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/net2_with_separate_vfs_udp_modified
+CMAKE_SOURCE_DIR = /workspace/kos_udp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/net2_with_separate_vfs_udp_modified/build
+CMAKE_BINARY_DIR = /workspace/kos_udp/build
 
 # Include any dependencies generated for this target.
 include einit/CMakeFiles/EinitHw-edl.dir/depend.make
@@ -78,8 +78,8 @@ include einit/CMakeFiles/EinitHw-edl.dir/progress.make
 include einit/CMakeFiles/EinitHw-edl.dir/flags.make
 
 einit/EinitHw-kss/Einit.edl.h: einit/EinitHw-kss/Einit.edl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EinitHw-kss/Einit.edl.h"
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/einit/EinitHw-kss && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/nk-gen-c -I /workspace/net2_with_separate_vfs_udp_modified/build/_headers_ -I /workspace/net2_with_separate_vfs_udp_modified/build/_headers_/client/.. -I /workspace/net2_with_separate_vfs_udp_modified/build/../install/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/arm-kos/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/include -P /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/include/system.platform -I /workspace/net2_with_separate_vfs_udp_modified/build/_headers_/einit/../kl /workspace/net2_with_separate_vfs_udp_modified/build/einit/EinitHw-kss/Einit.edl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/kos_udp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EinitHw-kss/Einit.edl.h"
+	cd /workspace/kos_udp/build/einit/EinitHw-kss && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/nk-gen-c -I /workspace/kos_udp/build/_headers_ -I /workspace/kos_udp/build/_headers_/client/.. -I /workspace/kos_udp/build/../install/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/arm-kos/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/include -P /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/include/system.platform -I /workspace/kos_udp/build/_headers_/einit/../kl /workspace/kos_udp/build/einit/EinitHw-kss/Einit.edl
 
 EinitHw-edl: einit/CMakeFiles/EinitHw-edl.dir/build.make
 
@@ -91,10 +91,10 @@ einit/CMakeFiles/EinitHw-edl.dir/build: EinitHw-edl
 .PHONY : einit/CMakeFiles/EinitHw-edl.dir/build
 
 einit/CMakeFiles/EinitHw-edl.dir/clean:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/einit && $(CMAKE_COMMAND) -P CMakeFiles/EinitHw-edl.dir/cmake_clean.cmake
+	cd /workspace/kos_udp/build/einit && $(CMAKE_COMMAND) -P CMakeFiles/EinitHw-edl.dir/cmake_clean.cmake
 .PHONY : einit/CMakeFiles/EinitHw-edl.dir/clean
 
 einit/CMakeFiles/EinitHw-edl.dir/depend: einit/EinitHw-kss/Einit.edl.h
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/net2_with_separate_vfs_udp_modified /workspace/net2_with_separate_vfs_udp_modified/einit /workspace/net2_with_separate_vfs_udp_modified/build /workspace/net2_with_separate_vfs_udp_modified/build/einit /workspace/net2_with_separate_vfs_udp_modified/build/einit/CMakeFiles/EinitHw-edl.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspace/kos_udp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/kos_udp /workspace/kos_udp/einit /workspace/kos_udp/build /workspace/kos_udp/build/einit /workspace/kos_udp/build/einit/CMakeFiles/EinitHw-edl.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : einit/CMakeFiles/EinitHw-edl.dir/depend
 

@@ -68,10 +68,10 @@ RM = /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/net2_with_separate_vfs_udp_modified
+CMAKE_SOURCE_DIR = /workspace/kos_udp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/net2_with_separate_vfs_udp_modified/build
+CMAKE_BINARY_DIR = /workspace/kos_udp/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,14 +146,14 @@ list_install_components/fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles /workspace/net2_with_separate_vfs_udp_modified/build/client/CMakeFiles/progress.marks
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles 0
+	cd /workspace/kos_udp/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspace/kos_udp/build/CMakeFiles /workspace/kos_udp/build/client/CMakeFiles/progress.marks
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/kos_udp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client/clean
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: cmake_check_build_system
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client/preinstall
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client/preinstall
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /workspace/kos_udp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 client/CMakeFiles/Client.dir/rule:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client/CMakeFiles/Client.dir/rule
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client/CMakeFiles/Client.dir/rule
 .PHONY : client/CMakeFiles/Client.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ Client: client/CMakeFiles/Client.dir/rule
 
 # fast build rule for target.
 Client/fast:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/Client.dir/build.make client/CMakeFiles/Client.dir/build
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/Client.dir/build.make client/CMakeFiles/Client.dir/build
 .PHONY : Client/fast
 
 # Convenience name for target.
 client/CMakeFiles/client_edl_files.dir/rule:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client/CMakeFiles/client_edl_files.dir/rule
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client/CMakeFiles/client_edl_files.dir/rule
 .PHONY : client/CMakeFiles/client_edl_files.dir/rule
 
 # Convenience name for target.
@@ -203,8 +203,35 @@ client_edl_files: client/CMakeFiles/client_edl_files.dir/rule
 
 # fast build rule for target.
 client_edl_files/fast:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client_edl_files.dir/build.make client/CMakeFiles/client_edl_files.dir/build
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client_edl_files.dir/build.make client/CMakeFiles/client_edl_files.dir/build
 .PHONY : client_edl_files/fast
+
+__/common/SocketsExchanger.obj: __/common/SocketsExchanger.cpp.obj
+
+.PHONY : __/common/SocketsExchanger.obj
+
+# target to build an object file
+__/common/SocketsExchanger.cpp.obj:
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/Client.dir/build.make client/CMakeFiles/Client.dir/__/common/SocketsExchanger.cpp.obj
+.PHONY : __/common/SocketsExchanger.cpp.obj
+
+__/common/SocketsExchanger.i: __/common/SocketsExchanger.cpp.i
+
+.PHONY : __/common/SocketsExchanger.i
+
+# target to preprocess a source file
+__/common/SocketsExchanger.cpp.i:
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/Client.dir/build.make client/CMakeFiles/Client.dir/__/common/SocketsExchanger.cpp.i
+.PHONY : __/common/SocketsExchanger.cpp.i
+
+__/common/SocketsExchanger.s: __/common/SocketsExchanger.cpp.s
+
+.PHONY : __/common/SocketsExchanger.s
+
+# target to generate assembly for a file
+__/common/SocketsExchanger.cpp.s:
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/Client.dir/build.make client/CMakeFiles/Client.dir/__/common/SocketsExchanger.cpp.s
+.PHONY : __/common/SocketsExchanger.cpp.s
 
 src/client.obj: src/client.cpp.obj
 
@@ -212,7 +239,7 @@ src/client.obj: src/client.cpp.obj
 
 # target to build an object file
 src/client.cpp.obj:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/Client.dir/build.make client/CMakeFiles/Client.dir/src/client.cpp.obj
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/Client.dir/build.make client/CMakeFiles/Client.dir/src/client.cpp.obj
 .PHONY : src/client.cpp.obj
 
 src/client.i: src/client.cpp.i
@@ -221,7 +248,7 @@ src/client.i: src/client.cpp.i
 
 # target to preprocess a source file
 src/client.cpp.i:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/Client.dir/build.make client/CMakeFiles/Client.dir/src/client.cpp.i
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/Client.dir/build.make client/CMakeFiles/Client.dir/src/client.cpp.i
 .PHONY : src/client.cpp.i
 
 src/client.s: src/client.cpp.s
@@ -230,7 +257,7 @@ src/client.s: src/client.cpp.s
 
 # target to generate assembly for a file
 src/client.cpp.s:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/Client.dir/build.make client/CMakeFiles/Client.dir/src/client.cpp.s
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/Client.dir/build.make client/CMakeFiles/Client.dir/src/client.cpp.s
 .PHONY : src/client.cpp.s
 
 # Help Target
@@ -247,6 +274,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Client"
 	@echo "... client_edl_files"
+	@echo "... __/common/SocketsExchanger.obj"
+	@echo "... __/common/SocketsExchanger.i"
+	@echo "... __/common/SocketsExchanger.s"
 	@echo "... src/client.obj"
 	@echo "... src/client.i"
 	@echo "... src/client.s"
@@ -261,6 +291,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /workspace/kos_udp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

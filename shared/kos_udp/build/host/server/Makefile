@@ -68,10 +68,10 @@ RM = /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/net2_with_separate_vfs_udp_modified
+CMAKE_SOURCE_DIR = /workspace/kos_udp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/net2_with_separate_vfs_udp_modified/build/host
+CMAKE_BINARY_DIR = /workspace/kos_udp/build/host
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,14 +100,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/host && $(CMAKE_COMMAND) -E cmake_progress_start /workspace/net2_with_separate_vfs_udp_modified/build/host/CMakeFiles /workspace/net2_with_separate_vfs_udp_modified/build/host/server/CMakeFiles/progress.marks
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/host && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/net2_with_separate_vfs_udp_modified/build/host/CMakeFiles 0
+	cd /workspace/kos_udp/build/host && $(CMAKE_COMMAND) -E cmake_progress_start /workspace/kos_udp/build/host/CMakeFiles /workspace/kos_udp/build/host/server/CMakeFiles/progress.marks
+	cd /workspace/kos_udp/build/host && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/kos_udp/build/host/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/host && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/clean
+	cd /workspace/kos_udp/build/host && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/clean
 .PHONY : clean
 
 # The main clean target
@@ -117,22 +117,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: cmake_check_build_system
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/host && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/preinstall
+	cd /workspace/kos_udp/build/host && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/host && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/preinstall
+	cd /workspace/kos_udp/build/host && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/host && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /workspace/kos_udp/build/host && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 server/CMakeFiles/server.dir/rule:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/host && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/CMakeFiles/server.dir/rule
+	cd /workspace/kos_udp/build/host && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/CMakeFiles/server.dir/rule
 .PHONY : server/CMakeFiles/server.dir/rule
 
 # Convenience name for target.
@@ -142,8 +142,62 @@ server: server/CMakeFiles/server.dir/rule
 
 # fast build rule for target.
 server/fast:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/host && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/build
+	cd /workspace/kos_udp/build/host && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/build
 .PHONY : server/fast
+
+__/common/SocketsExchanger.o: __/common/SocketsExchanger.cpp.o
+
+.PHONY : __/common/SocketsExchanger.o
+
+# target to build an object file
+__/common/SocketsExchanger.cpp.o:
+	cd /workspace/kos_udp/build/host && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/__/common/SocketsExchanger.cpp.o
+.PHONY : __/common/SocketsExchanger.cpp.o
+
+__/common/SocketsExchanger.i: __/common/SocketsExchanger.cpp.i
+
+.PHONY : __/common/SocketsExchanger.i
+
+# target to preprocess a source file
+__/common/SocketsExchanger.cpp.i:
+	cd /workspace/kos_udp/build/host && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/__/common/SocketsExchanger.cpp.i
+.PHONY : __/common/SocketsExchanger.cpp.i
+
+__/common/SocketsExchanger.s: __/common/SocketsExchanger.cpp.s
+
+.PHONY : __/common/SocketsExchanger.s
+
+# target to generate assembly for a file
+__/common/SocketsExchanger.cpp.s:
+	cd /workspace/kos_udp/build/host && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/__/common/SocketsExchanger.cpp.s
+.PHONY : __/common/SocketsExchanger.cpp.s
+
+src/generator.o: src/generator.cpp.o
+
+.PHONY : src/generator.o
+
+# target to build an object file
+src/generator.cpp.o:
+	cd /workspace/kos_udp/build/host && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/src/generator.cpp.o
+.PHONY : src/generator.cpp.o
+
+src/generator.i: src/generator.cpp.i
+
+.PHONY : src/generator.i
+
+# target to preprocess a source file
+src/generator.cpp.i:
+	cd /workspace/kos_udp/build/host && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/src/generator.cpp.i
+.PHONY : src/generator.cpp.i
+
+src/generator.s: src/generator.cpp.s
+
+.PHONY : src/generator.s
+
+# target to generate assembly for a file
+src/generator.cpp.s:
+	cd /workspace/kos_udp/build/host && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/src/generator.cpp.s
+.PHONY : src/generator.cpp.s
 
 src/server.o: src/server.cpp.o
 
@@ -151,7 +205,7 @@ src/server.o: src/server.cpp.o
 
 # target to build an object file
 src/server.cpp.o:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/host && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/src/server.cpp.o
+	cd /workspace/kos_udp/build/host && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/src/server.cpp.o
 .PHONY : src/server.cpp.o
 
 src/server.i: src/server.cpp.i
@@ -160,7 +214,7 @@ src/server.i: src/server.cpp.i
 
 # target to preprocess a source file
 src/server.cpp.i:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/host && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/src/server.cpp.i
+	cd /workspace/kos_udp/build/host && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/src/server.cpp.i
 .PHONY : src/server.cpp.i
 
 src/server.s: src/server.cpp.s
@@ -169,7 +223,7 @@ src/server.s: src/server.cpp.s
 
 # target to generate assembly for a file
 src/server.cpp.s:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/host && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/src/server.cpp.s
+	cd /workspace/kos_udp/build/host && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/src/server.cpp.s
 .PHONY : src/server.cpp.s
 
 # Help Target
@@ -181,6 +235,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... server"
+	@echo "... __/common/SocketsExchanger.o"
+	@echo "... __/common/SocketsExchanger.i"
+	@echo "... __/common/SocketsExchanger.s"
+	@echo "... src/generator.o"
+	@echo "... src/generator.i"
+	@echo "... src/generator.s"
 	@echo "... src/server.o"
 	@echo "... src/server.i"
 	@echo "... src/server.s"
@@ -195,6 +255,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/host && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /workspace/kos_udp/build/host && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

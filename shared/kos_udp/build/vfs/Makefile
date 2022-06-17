@@ -68,10 +68,10 @@ RM = /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/net2_with_separate_vfs_udp_modified
+CMAKE_SOURCE_DIR = /workspace/kos_udp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/net2_with_separate_vfs_udp_modified/build
+CMAKE_BINARY_DIR = /workspace/kos_udp/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,14 +146,14 @@ list_install_components/fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles /workspace/net2_with_separate_vfs_udp_modified/build/vfs/CMakeFiles/progress.marks
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vfs/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles 0
+	cd /workspace/kos_udp/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspace/kos_udp/build/CMakeFiles /workspace/kos_udp/build/vfs/CMakeFiles/progress.marks
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vfs/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/kos_udp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vfs/clean
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vfs/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: cmake_check_build_system
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vfs/preinstall
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vfs/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vfs/preinstall
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vfs/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /workspace/kos_udp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 vfs/CMakeFiles/net_vfs_edl_files.dir/rule:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vfs/CMakeFiles/net_vfs_edl_files.dir/rule
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vfs/CMakeFiles/net_vfs_edl_files.dir/rule
 .PHONY : vfs/CMakeFiles/net_vfs_edl_files.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ net_vfs_edl_files: vfs/CMakeFiles/net_vfs_edl_files.dir/rule
 
 # fast build rule for target.
 net_vfs_edl_files/fast:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f vfs/CMakeFiles/net_vfs_edl_files.dir/build.make vfs/CMakeFiles/net_vfs_edl_files.dir/build
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f vfs/CMakeFiles/net_vfs_edl_files.dir/build.make vfs/CMakeFiles/net_vfs_edl_files.dir/build
 .PHONY : net_vfs_edl_files/fast
 
 # Convenience name for target.
 vfs/CMakeFiles/NetVfs.dir/rule:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vfs/CMakeFiles/NetVfs.dir/rule
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vfs/CMakeFiles/NetVfs.dir/rule
 .PHONY : vfs/CMakeFiles/NetVfs.dir/rule
 
 # Convenience name for target.
@@ -203,7 +203,7 @@ NetVfs: vfs/CMakeFiles/NetVfs.dir/rule
 
 # fast build rule for target.
 NetVfs/fast:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f vfs/CMakeFiles/NetVfs.dir/build.make vfs/CMakeFiles/NetVfs.dir/build
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f vfs/CMakeFiles/NetVfs.dir/build.make vfs/CMakeFiles/NetVfs.dir/build
 .PHONY : NetVfs/fast
 
 src/net_vfs.obj: src/net_vfs.c.obj
@@ -212,7 +212,7 @@ src/net_vfs.obj: src/net_vfs.c.obj
 
 # target to build an object file
 src/net_vfs.c.obj:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f vfs/CMakeFiles/NetVfs.dir/build.make vfs/CMakeFiles/NetVfs.dir/src/net_vfs.c.obj
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f vfs/CMakeFiles/NetVfs.dir/build.make vfs/CMakeFiles/NetVfs.dir/src/net_vfs.c.obj
 .PHONY : src/net_vfs.c.obj
 
 src/net_vfs.i: src/net_vfs.c.i
@@ -221,7 +221,7 @@ src/net_vfs.i: src/net_vfs.c.i
 
 # target to preprocess a source file
 src/net_vfs.c.i:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f vfs/CMakeFiles/NetVfs.dir/build.make vfs/CMakeFiles/NetVfs.dir/src/net_vfs.c.i
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f vfs/CMakeFiles/NetVfs.dir/build.make vfs/CMakeFiles/NetVfs.dir/src/net_vfs.c.i
 .PHONY : src/net_vfs.c.i
 
 src/net_vfs.s: src/net_vfs.c.s
@@ -230,7 +230,7 @@ src/net_vfs.s: src/net_vfs.c.s
 
 # target to generate assembly for a file
 src/net_vfs.c.s:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(MAKE) $(MAKESILENT) -f vfs/CMakeFiles/NetVfs.dir/build.make vfs/CMakeFiles/NetVfs.dir/src/net_vfs.c.s
+	cd /workspace/kos_udp/build && $(MAKE) $(MAKESILENT) -f vfs/CMakeFiles/NetVfs.dir/build.make vfs/CMakeFiles/NetVfs.dir/src/net_vfs.c.s
 .PHONY : src/net_vfs.c.s
 
 # Help Target
@@ -261,6 +261,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /workspace/kos_udp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

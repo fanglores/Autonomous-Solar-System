@@ -9,8 +9,9 @@
 #include <sys/types.h>
 
 #include <platform/platform.h>
-
 #include <kos_net.h>
+
+#include "../../common/SocketsExchanger.h"
 
 #define MSG_SIZE 2
 #define EXAMPLE_PORT 3425
@@ -34,62 +35,15 @@ int main(int argc, const char *argv[])
 #define server_addr "localhost"
 #endif
 
-    /* Create socket for connection with server. */
-    int sock = socket(AF_INET, SOCK_DGRAM, 0);
-
-    if (-1 == sock)
-    {
-        perror("cannot create socket");
-        return EXIT_FAILURE;
-    }
-
-    /* Creating and initialisation of socket`s address structure for connection with server. */
-    struct sockaddr_in addr;
-    memset(&addr, 0, sizeof(addr));
-    addr.sin_family = AF_INET;
-    addr.sin_port = htons(EXAMPLE_PORT);
-
-/*
-    struct addrinfo hints;
-    memset(&hints, 0, sizeof(struct addrinfo));
-    hints.ai_family = AF_INET;
-    hints.ai_socktype = SOCK_STREAM;
-
-    struct addrinfo *resultHints = NULL;
-    int res = getaddrinfo(server_addr, NULL, &hints, &resultHints);
-    if (res != 0)
-    {
-        perror("cannot get address info");
-        close(sock);
-        return EXIT_FAILURE;
-    }
-
-    struct sockaddr_in* in_addr = (struct sockaddr_in *)resultHints->ai_addr;
-    memcpy(&stSockAddr.sin_addr.s_addr, &in_addr->sin_addr.s_addr, sizeof(in_addr_t));
-    freeaddrinfo(resultHints);
-*/
-
-    char buf[] = "0\n";
-    /* Send data to server. */
-    for(int i = 0; i < 3; i++)
-    {
-	    if (-1 == sendto(sock, buf, strlen(buf) + 1, 0, (struct sockaddr*)&addr, sizeof(addr)))
-	    {
-		perror("send failed");
-		close(sock);
-		return EXIT_FAILURE;
-	    }
-	    else
-	    {
-		/* Print sended to server data in terminal. */
-		fprintf(stderr, "Client sent: %s", buf);
-	    }
-	    sleep(2);
-    }
-
-    /* Close connection with server. */
-    shutdown(sock, SHUT_RDWR);
-    close(sock);
+	UDPExchanger* udp_client = new UDPExchanger('c');
+	
+	fprintf(stderr, "[TEST SENDER] Client has started!\n[UDP] Starting send packages!\n");
+	
+	for(int i = 0; i < NUM_RETRIES; i++)
+	{
+		udp_client->Send("00");
+		sleep(1);	
+	}
 
     return EXIT_SUCCESS;
 }

@@ -63,10 +63,10 @@ RM = /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/net2_with_separate_vfs_udp_modified
+CMAKE_SOURCE_DIR = /workspace/kos_udp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/net2_with_separate_vfs_udp_modified/build
+CMAKE_BINARY_DIR = /workspace/kos_udp/build
 
 # Include any dependencies generated for this target.
 include client/CMakeFiles/client_edl_files.dir/depend.make
@@ -78,16 +78,16 @@ include client/CMakeFiles/client_edl_files.dir/progress.make
 include client/CMakeFiles/client_edl_files.dir/flags.make
 
 _headers_/client/Client.edl.h: client/Client.edl.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../_headers_/client/Client.edl.h"
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/client && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/cmake -E copy /workspace/net2_with_separate_vfs_udp_modified/build/client/Client.edl.h /workspace/net2_with_separate_vfs_udp_modified/build/_headers_/client/../client/Client.edl.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/kos_udp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../_headers_/client/Client.edl.h"
+	cd /workspace/kos_udp/build/client && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/cmake -E copy /workspace/kos_udp/build/client/Client.edl.h /workspace/kos_udp/build/_headers_/client/../client/Client.edl.h
 
 client/Client.edl.h: _headers_/client/Client.edl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Client.edl.h"
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/client && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/nk-gen-c -I /workspace/net2_with_separate_vfs_udp_modified/build/_headers_ -I /workspace/net2_with_separate_vfs_udp_modified/build/_headers_/client/.. -I /workspace/net2_with_separate_vfs_udp_modified/build/../install/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/arm-kos/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/include -P /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/include/system.platform -I /workspace/net2_with_separate_vfs_udp_modified/build/_headers_/client/../client /workspace/net2_with_separate_vfs_udp_modified/build/_headers_/client/../client/Client.edl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/kos_udp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Client.edl.h"
+	cd /workspace/kos_udp/build/client && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/nk-gen-c -I /workspace/kos_udp/build/_headers_ -I /workspace/kos_udp/build/_headers_/client/.. -I /workspace/kos_udp/build/../install/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/arm-kos/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/include -P /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/include/system.platform -I /workspace/kos_udp/build/_headers_/client/../client /workspace/kos_udp/build/_headers_/client/../client/Client.edl
 
 _headers_/client/Client.edl: ../resources/edl/Client.edl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating ../_headers_/client/Client.edl"
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/client && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/cmake -E copy /workspace/net2_with_separate_vfs_udp_modified/resources/edl/Client.edl /workspace/net2_with_separate_vfs_udp_modified/build/_headers_/client/../client/Client.edl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/kos_udp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating ../_headers_/client/Client.edl"
+	cd /workspace/kos_udp/build/client && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/cmake -E copy /workspace/kos_udp/resources/edl/Client.edl /workspace/kos_udp/build/_headers_/client/../client/Client.edl
 
 client_edl_files: client/CMakeFiles/client_edl_files.dir/build.make
 
@@ -99,12 +99,12 @@ client/CMakeFiles/client_edl_files.dir/build: client_edl_files
 .PHONY : client/CMakeFiles/client_edl_files.dir/build
 
 client/CMakeFiles/client_edl_files.dir/clean:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/client && $(CMAKE_COMMAND) -P CMakeFiles/client_edl_files.dir/cmake_clean.cmake
+	cd /workspace/kos_udp/build/client && $(CMAKE_COMMAND) -P CMakeFiles/client_edl_files.dir/cmake_clean.cmake
 .PHONY : client/CMakeFiles/client_edl_files.dir/clean
 
 client/CMakeFiles/client_edl_files.dir/depend: _headers_/client/Client.edl.h
 client/CMakeFiles/client_edl_files.dir/depend: client/Client.edl.h
 client/CMakeFiles/client_edl_files.dir/depend: _headers_/client/Client.edl
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/net2_with_separate_vfs_udp_modified /workspace/net2_with_separate_vfs_udp_modified/client /workspace/net2_with_separate_vfs_udp_modified/build /workspace/net2_with_separate_vfs_udp_modified/build/client /workspace/net2_with_separate_vfs_udp_modified/build/client/CMakeFiles/client_edl_files.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspace/kos_udp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/kos_udp /workspace/kos_udp/client /workspace/kos_udp/build /workspace/kos_udp/build/client /workspace/kos_udp/build/client/CMakeFiles/client_edl_files.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : client/CMakeFiles/client_edl_files.dir/depend
 

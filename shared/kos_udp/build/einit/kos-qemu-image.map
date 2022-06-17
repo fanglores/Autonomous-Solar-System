@@ -14,7 +14,7 @@ Discarded input sections
                 0x0000000000000000       0x33 /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/../libexec/arm-kos/kos-qemu
  .noinit        0x0000000000000000        0x2 /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/../libexec/arm-kos/kos-qemu
  .ARM.attributes
-                0x0000000000000000       0x1d /tmp/tmp.52wtZDKFlp
+                0x0000000000000000       0x1d /tmp/tmp.wioVr6xnnp
  .debug_frame   0x0000000000000000       0x2c /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/lib/gcc/arm-kos/9.2.1/libgcc.a(_aeabi_uldivmod.o)
  .ARM.attributes
                 0x0000000000000000       0x1f /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/lib/gcc/arm-kos/9.2.1/libgcc.a(_aeabi_uldivmod.o)
@@ -34,7 +34,7 @@ Name             Origin             Length             Attributes
 Linker script and memory map
 
 LOAD /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/../libexec/arm-kos/kos-qemu
-LOAD /tmp/tmp.52wtZDKFlp
+LOAD /tmp/tmp.wioVr6xnnp
 LOAD /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/lib/gcc/arm-kos/9.2.1/libgcc.a
                 0x0000000082000000                . = 0x82000000
                 0x0000000082000000                _begin = .
@@ -199,7 +199,7 @@ LOAD /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/lib/gcc/arm-kos/9.2.1/
                 0x0000000082006fd0                rtl_strchr
                 0x0000000082007090                rtl_strrchr
                 0x0000000082007140                rtl_strcat
- .text          0x0000000082007164        0x0 /tmp/tmp.52wtZDKFlp
+ .text          0x0000000082007164        0x0 /tmp/tmp.wioVr6xnnp
  .text          0x0000000082007164       0x3c /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/lib/gcc/arm-kos/9.2.1/libgcc.a(_aeabi_uldivmod.o)
                 0x0000000082007164                __aeabi_uldivmod
  .text          0x00000000820071a0      0x134 /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/lib/gcc/arm-kos/9.2.1/libgcc.a(_udivmoddi4.o)
@@ -244,7 +244,7 @@ LOAD /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/lib/gcc/arm-kos/9.2.1/
                 0x000000008200a098                uniFixed16Size
                 0x000000008200a09c                uniFixed16Psf
                 0x000000008200cb3c                uartHw
- .data          0x000000008200cc1c        0x0 /tmp/tmp.52wtZDKFlp
+ .data          0x000000008200cc1c        0x0 /tmp/tmp.wioVr6xnnp
  .data          0x000000008200cc1c        0x0 /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/lib/gcc/arm-kos/9.2.1/libgcc.a(_aeabi_uldivmod.o)
  .data          0x000000008200cc1c        0x0 /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/lib/gcc/arm-kos/9.2.1/libgcc.a(_udivmoddi4.o)
  .data          0x000000008200cc1c        0x0 /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/lib/gcc/arm-kos/9.2.1/libgcc.a(_dvmd_tls.o)
@@ -257,7 +257,7 @@ LOAD /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/lib/gcc/arm-kos/9.2.1/
  *fill*         0x000000008200cc1c      0x3e4 
                 0x000000008200d000                . = ALIGN (0x1000)
 
-.rodata         0x000000008200d000   0x54e000
+.rodata         0x000000008200d000   0x678000
  *(.rodata)
  .rodata        0x000000008200d000    0x39936 /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/../libexec/arm-kos/kos-qemu
                 0x000000008200d000                kernelImageBegin
@@ -274,40 +274,40 @@ LOAD /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/lib/gcc/arm-kos/9.2.1/
  *fill*         0x0000000082046d37      0x2c9 
                 0x0000000082047000                __RomfsBegin = .
  *(.romfs)
- .romfs         0x0000000082047000   0x514000 /tmp/tmp.52wtZDKFlp
+ .romfs         0x0000000082047000   0x63e000 /tmp/tmp.wioVr6xnnp
  *(.romfs.*)
-                0x000000008255b000                __RomfsEnd = .
-                0x000000008255b000                . = ALIGN (0x1000)
-                0x000000000055b000                _imagesize = (. - _begin)
-                0x000000008255b000                . = ALIGN (0x1000)
+                0x0000000082685000                __RomfsEnd = .
+                0x0000000082685000                . = ALIGN (0x1000)
+                0x0000000000685000                _imagesize = (. - _begin)
+                0x0000000082685000                . = ALIGN (0x1000)
 
-.bootstub       0x000000008255b000        0x0
+.bootstub       0x0000000082685000        0x0
  *(.bootstub)
-                0x000000008255b000                . = ALIGN (0x1000)
-                0x000000008255b000                . = ALIGN (0x1000)
+                0x0000000082685000                . = ALIGN (0x1000)
+                0x0000000082685000                . = ALIGN (0x1000)
 
-.bss            0x000000008255b000     0xb000
+.bss            0x0000000082685000     0xb000
  *(.bss..page_aligned)
  *(.dynbss)
  *(.bss)
- .bss           0x000000008255b000     0xaa68 /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/../libexec/arm-kos/kos-qemu
-                0x000000008255cff8                InitialStack
-                0x000000008255d024                fbBase
-                0x000000008255d03c                realFbBase
-                0x0000000082565268                mapList
- .bss           0x0000000082565a68        0x0 /tmp/tmp.52wtZDKFlp
- .bss           0x0000000082565a68        0x0 /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/lib/gcc/arm-kos/9.2.1/libgcc.a(_aeabi_uldivmod.o)
- .bss           0x0000000082565a68        0x0 /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/lib/gcc/arm-kos/9.2.1/libgcc.a(_udivmoddi4.o)
- .bss           0x0000000082565a68        0x0 /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/lib/gcc/arm-kos/9.2.1/libgcc.a(_dvmd_tls.o)
+ .bss           0x0000000082685000     0xaa68 /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/../libexec/arm-kos/kos-qemu
+                0x0000000082686ff8                InitialStack
+                0x0000000082687024                fbBase
+                0x000000008268703c                realFbBase
+                0x000000008268f268                mapList
+ .bss           0x000000008268fa68        0x0 /tmp/tmp.wioVr6xnnp
+ .bss           0x000000008268fa68        0x0 /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/lib/gcc/arm-kos/9.2.1/libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x000000008268fa68        0x0 /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/lib/gcc/arm-kos/9.2.1/libgcc.a(_udivmoddi4.o)
+ .bss           0x000000008268fa68        0x0 /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/lib/gcc/arm-kos/9.2.1/libgcc.a(_dvmd_tls.o)
  *(COMMON)
  *(.sbss)
  *(.scommon)
-                0x0000000082566000                . = ALIGN (0x1000)
- *fill*         0x0000000082565a68      0x598 
-                0x0000000082566000                _end = .
+                0x0000000082690000                . = ALIGN (0x1000)
+ *fill*         0x000000008268fa68      0x598 
+                0x0000000082690000                _end = .
 
 /DISCARD/
  *(.discard)
  *(.discard.*)
  *(*)
-OUTPUT(/workspace/net2_with_separate_vfs_udp_modified/build/einit/kos-qemu-image elf32-littlearm)
+OUTPUT(/workspace/kos_udp/build/einit/kos-qemu-image elf32-littlearm)

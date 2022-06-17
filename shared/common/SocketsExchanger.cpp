@@ -61,8 +61,6 @@ int UDPExchanger::Send(const char* data)
 	if (this->type == 'c') sendto(sock, data, sizeof(data), 0, (struct sockaddr*)&client_addr, sizeof(client_addr));
 	if (this->type == 's') sendto(sock, data, sizeof(data), 0, (struct sockaddr*)&server_addr, sizeof(server_addr));
 	
-	sleep(1);	//if we send smth, then we wait for recepient to receive the datagramm
-	
 	return 0;
 }
 

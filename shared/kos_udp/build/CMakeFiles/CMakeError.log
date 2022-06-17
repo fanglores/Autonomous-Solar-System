@@ -1,23 +1,23 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles/CMakeTmp
+Change Dir: /workspace/kos_udp/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_793ff/fast && /usr/bin/make  -f CMakeFiles/cmTC_793ff.dir/build.make CMakeFiles/cmTC_793ff.dir/build
-make[1]: Entering directory '/workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_793ff.dir/src.c.obj
-/opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/arm-kos-gcc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_793ff.dir/src.c.obj   -c /workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_793ff
-/opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/cmake -E cmake_link_script CMakeFiles/cmTC_793ff.dir/link.txt --verbose=1
-/opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/arm-kos-gcc  -DCMAKE_HAVE_LIBC_PTHREAD   -static  CMakeFiles/cmTC_793ff.dir/src.c.obj  -o cmTC_793ff 
-/opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/arm-kos-ld: CMakeFiles/cmTC_793ff.dir/src.c.obj: in function `main':
+Run Build Command(s):/usr/bin/make cmTC_06487/fast && /usr/bin/make  -f CMakeFiles/cmTC_06487.dir/build.make CMakeFiles/cmTC_06487.dir/build
+make[1]: Entering directory '/workspace/kos_udp/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_06487.dir/src.c.obj
+/opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/arm-kos-gcc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_06487.dir/src.c.obj   -c /workspace/kos_udp/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_06487
+/opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/cmake -E cmake_link_script CMakeFiles/cmTC_06487.dir/link.txt --verbose=1
+/opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/arm-kos-gcc  -DCMAKE_HAVE_LIBC_PTHREAD   -static  CMakeFiles/cmTC_06487.dir/src.c.obj  -o cmTC_06487 
+/opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/arm-kos-ld: CMakeFiles/cmTC_06487.dir/src.c.obj: in function `main':
 src.c:(.text+0x44): undefined reference to `pthread_create'
 /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/arm-kos-ld: src.c:(.text+0x5c): undefined reference to `pthread_cancel'
 /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/arm-kos-ld: src.c:(.text+0x74): undefined reference to `pthread_exit'
 /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/arm-kos-ld: /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/lib/gcc/arm-kos/9.2.1/libgcc.a(emutls.o): in function `__gthread_active_p':
 emutls.c:(.text+0x20): undefined reference to `pthread_cancel'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_793ff.dir/build.make:107: cmTC_793ff] Error 1
-make[1]: Leaving directory '/workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:141: cmTC_793ff/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_06487.dir/build.make:107: cmTC_06487] Error 1
+make[1]: Leaving directory '/workspace/kos_udp/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:141: cmTC_06487/fast] Error 2
 
 
 Source file was:

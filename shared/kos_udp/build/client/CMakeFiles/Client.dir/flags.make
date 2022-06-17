@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=gnu++11 -Wall -Wundef -Wformat -Wno-shadow -Wcast-qual -Wcast-
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/workspace/net2_with_separate_vfs_udp_modified/build/_headers_build_ -I/workspace/net2_with_separate_vfs_udp_modified/build/_headers_ -I/workspace/net2_with_separate_vfs_udp_modified/build/../install/include 
+CXX_INCLUDES = -I/workspace/kos_udp/build/_headers_build_ -I/workspace/kos_udp/build/_headers_ -I/workspace/kos_udp/build/../install/include 
 

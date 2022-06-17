@@ -1,8 +1,8 @@
-# Install script for directory: /workspace/net2_with_separate_vfs_udp_modified
+# Install script for directory: /workspace/kos_udp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/workspace/net2_with_separate_vfs_udp_modified/build/../install")
+  set(CMAKE_INSTALL_PREFIX "/workspace/kos_udp/build/../install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,11 +34,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/workspace/net2_with_separate_vfs_udp_modified/build/client/cmake_install.cmake")
-  include("/workspace/net2_with_separate_vfs_udp_modified/build/env/cmake_install.cmake")
-  include("/workspace/net2_with_separate_vfs_udp_modified/build/vfs/cmake_install.cmake")
-  include("/workspace/net2_with_separate_vfs_udp_modified/build/server/cmake_install.cmake")
-  include("/workspace/net2_with_separate_vfs_udp_modified/build/einit/cmake_install.cmake")
+  include("/workspace/kos_udp/build/client/cmake_install.cmake")
+  include("/workspace/kos_udp/build/env/cmake_install.cmake")
+  include("/workspace/kos_udp/build/vfs/cmake_install.cmake")
+  include("/workspace/kos_udp/build/server/cmake_install.cmake")
+  include("/workspace/kos_udp/build/einit/cmake_install.cmake")
 
 endif()
 
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/workspace/net2_with_separate_vfs_udp_modified/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/workspace/kos_udp/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

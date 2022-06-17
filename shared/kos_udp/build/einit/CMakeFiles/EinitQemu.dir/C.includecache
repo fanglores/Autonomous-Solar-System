@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/workspace/net2_with_separate_vfs_udp_modified/build/einit/EinitQemu-kss/EinitQemu.c
+/workspace/kos_udp/build/einit/EinitQemu-kss/EinitQemu.c
 stdlib.h
 -
 stdio.h

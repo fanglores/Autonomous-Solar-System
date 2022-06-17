@@ -6,23 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/workspace/net2_with_separate_vfs_udp_modified/server/src/server.cpp
-netdb.h
--
+/workspace/kos_udp/common/SocketsExchanger.h
 netinet/in.h
 -
-stdio.h
--
-stdlib.h
--
-string.h
--
-sys/select.h
--
-sys/socket.h
--
-sys/types.h
--
-unistd.h
+
+/workspace/kos_udp/common/generatorEntity.h
+
+/workspace/kos_udp/server/src/generator.h
+../../common/generatorEntity.h
+/workspace/kos_udp/common/generatorEntity.h
+../../common/SocketsExchanger.h
+/workspace/kos_udp/common/SocketsExchanger.h
+
+/workspace/kos_udp/server/src/server.cpp
+../../common/SocketsExchanger.h
+/workspace/kos_udp/common/SocketsExchanger.h
+generator.h
+/workspace/kos_udp/server/src/generator.h
+iostream
 -
 

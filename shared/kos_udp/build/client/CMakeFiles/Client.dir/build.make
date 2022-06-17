@@ -63,10 +63,10 @@ RM = /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/net2_with_separate_vfs_udp_modified
+CMAKE_SOURCE_DIR = /workspace/kos_udp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/net2_with_separate_vfs_udp_modified/build
+CMAKE_BINARY_DIR = /workspace/kos_udp/build
 
 # Include any dependencies generated for this target.
 include client/CMakeFiles/Client.dir/depend.make
@@ -79,30 +79,45 @@ include client/CMakeFiles/Client.dir/flags.make
 
 client/CMakeFiles/Client.dir/src/client.cpp.obj: client/CMakeFiles/Client.dir/flags.make
 client/CMakeFiles/Client.dir/src/client.cpp.obj: ../client/src/client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object client/CMakeFiles/Client.dir/src/client.cpp.obj"
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/client && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/arm-kos-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client.dir/src/client.cpp.obj -c /workspace/net2_with_separate_vfs_udp_modified/client/src/client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/kos_udp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object client/CMakeFiles/Client.dir/src/client.cpp.obj"
+	cd /workspace/kos_udp/build/client && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/arm-kos-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client.dir/src/client.cpp.obj -c /workspace/kos_udp/client/src/client.cpp
 
 client/CMakeFiles/Client.dir/src/client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/src/client.cpp.i"
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/client && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/arm-kos-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/net2_with_separate_vfs_udp_modified/client/src/client.cpp > CMakeFiles/Client.dir/src/client.cpp.i
+	cd /workspace/kos_udp/build/client && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/arm-kos-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/kos_udp/client/src/client.cpp > CMakeFiles/Client.dir/src/client.cpp.i
 
 client/CMakeFiles/Client.dir/src/client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/src/client.cpp.s"
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/client && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/arm-kos-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/net2_with_separate_vfs_udp_modified/client/src/client.cpp -o CMakeFiles/Client.dir/src/client.cpp.s
+	cd /workspace/kos_udp/build/client && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/arm-kos-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/kos_udp/client/src/client.cpp -o CMakeFiles/Client.dir/src/client.cpp.s
+
+client/CMakeFiles/Client.dir/__/common/SocketsExchanger.cpp.obj: client/CMakeFiles/Client.dir/flags.make
+client/CMakeFiles/Client.dir/__/common/SocketsExchanger.cpp.obj: ../common/SocketsExchanger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/kos_udp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object client/CMakeFiles/Client.dir/__/common/SocketsExchanger.cpp.obj"
+	cd /workspace/kos_udp/build/client && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/arm-kos-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client.dir/__/common/SocketsExchanger.cpp.obj -c /workspace/kos_udp/common/SocketsExchanger.cpp
+
+client/CMakeFiles/Client.dir/__/common/SocketsExchanger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/__/common/SocketsExchanger.cpp.i"
+	cd /workspace/kos_udp/build/client && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/arm-kos-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/kos_udp/common/SocketsExchanger.cpp > CMakeFiles/Client.dir/__/common/SocketsExchanger.cpp.i
+
+client/CMakeFiles/Client.dir/__/common/SocketsExchanger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/__/common/SocketsExchanger.cpp.s"
+	cd /workspace/kos_udp/build/client && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/arm-kos-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/kos_udp/common/SocketsExchanger.cpp -o CMakeFiles/Client.dir/__/common/SocketsExchanger.cpp.s
 
 # Object files for target Client
 Client_OBJECTS = \
-"CMakeFiles/Client.dir/src/client.cpp.obj"
+"CMakeFiles/Client.dir/src/client.cpp.obj" \
+"CMakeFiles/Client.dir/__/common/SocketsExchanger.cpp.obj"
 
 # External object files for target Client
 Client_EXTERNAL_OBJECTS =
 
 client/Client: client/CMakeFiles/Client.dir/src/client.cpp.obj
+client/Client: client/CMakeFiles/Client.dir/__/common/SocketsExchanger.cpp.obj
 client/Client: client/CMakeFiles/Client.dir/build.make
 client/Client: /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/lib/libvfs_remote.a
 client/Client: client/CMakeFiles/Client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Client"
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/client && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Client.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspace/kos_udp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Client"
+	cd /workspace/kos_udp/build/client && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 client/CMakeFiles/Client.dir/build: client/Client
@@ -110,10 +125,10 @@ client/CMakeFiles/Client.dir/build: client/Client
 .PHONY : client/CMakeFiles/Client.dir/build
 
 client/CMakeFiles/Client.dir/clean:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/client && $(CMAKE_COMMAND) -P CMakeFiles/Client.dir/cmake_clean.cmake
+	cd /workspace/kos_udp/build/client && $(CMAKE_COMMAND) -P CMakeFiles/Client.dir/cmake_clean.cmake
 .PHONY : client/CMakeFiles/Client.dir/clean
 
 client/CMakeFiles/Client.dir/depend:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/net2_with_separate_vfs_udp_modified /workspace/net2_with_separate_vfs_udp_modified/client /workspace/net2_with_separate_vfs_udp_modified/build /workspace/net2_with_separate_vfs_udp_modified/build/client /workspace/net2_with_separate_vfs_udp_modified/build/client/CMakeFiles/Client.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspace/kos_udp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/kos_udp /workspace/kos_udp/client /workspace/kos_udp/build /workspace/kos_udp/build/client /workspace/kos_udp/build/client/CMakeFiles/Client.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : client/CMakeFiles/Client.dir/depend
 

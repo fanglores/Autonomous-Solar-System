@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/workspace/net2_with_separate_vfs_udp_modified/env/src/env.c" "/workspace/net2_with_separate_vfs_udp_modified/build/env/CMakeFiles/Env.dir/src/env.c.obj"
+  "/workspace/kos_udp/env/src/env.c" "/workspace/kos_udp/build/env/CMakeFiles/Env.dir/src/env.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

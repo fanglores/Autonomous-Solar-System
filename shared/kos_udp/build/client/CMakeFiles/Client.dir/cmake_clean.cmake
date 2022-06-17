@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Client.dir/__/common/SocketsExchanger.cpp.obj"
   "CMakeFiles/Client.dir/src/client.cpp.obj"
   "Client"
   "Client.pdb"

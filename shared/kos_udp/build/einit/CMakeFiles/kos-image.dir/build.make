@@ -63,10 +63,10 @@ RM = /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/net2_with_separate_vfs_udp_modified
+CMAKE_SOURCE_DIR = /workspace/kos_udp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/net2_with_separate_vfs_udp_modified/build
+CMAKE_BINARY_DIR = /workspace/kos_udp/build
 
 # Utility rule file for kos-image.
 
@@ -81,16 +81,16 @@ einit/kos-image: env/Env
 einit/kos-image: vfs/NetVfs
 einit/kos-image: einit/EinitHw
 einit/kos-image: einit/EinitHw-kss/ksm.module
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating KasperskyOS image: /workspace/net2_with_separate_vfs_udp_modified/build/einit/kos-image"
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/einit && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/makeimg --target=arm-kos --sys-root=/opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos --with-toolchain=/opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain --with-init=/workspace/net2_with_separate_vfs_udp_modified/build/einit/EinitHw --ldscript=/opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/../libexec/arm-kos/kos.ld --img-src=/opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/../libexec/arm-kos/kos --img-dst=/workspace/net2_with_separate_vfs_udp_modified/build/einit/kos-image /workspace/net2_with_separate_vfs_udp_modified/build/client/Client /workspace/net2_with_separate_vfs_udp_modified/build/env/Env /workspace/net2_with_separate_vfs_udp_modified/build/vfs/NetVfs /workspace/net2_with_separate_vfs_udp_modified/build/einit/EinitHw-kss/ksm.module
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/kos_udp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating KasperskyOS image: /workspace/kos_udp/build/einit/kos-image"
+	cd /workspace/kos_udp/build/einit && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/makeimg --target=arm-kos --sys-root=/opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos --with-toolchain=/opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain --with-init=/workspace/kos_udp/build/einit/EinitHw --ldscript=/opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/../libexec/arm-kos/kos.ld --img-src=/opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/../libexec/arm-kos/kos --img-dst=/workspace/kos_udp/build/einit/kos-image /workspace/kos_udp/build/client/Client /workspace/kos_udp/build/env/Env /workspace/kos_udp/build/vfs/NetVfs /workspace/kos_udp/build/einit/EinitHw-kss/ksm.module
 
 einit/EinitHw-kss/ksm.module: einit/EinitHw-kss/src/security_arm.psl
 einit/EinitHw-kss/ksm.module: client/Client
 einit/EinitHw-kss/ksm.module: env/Env
 einit/EinitHw-kss/ksm.module: vfs/NetVfs
 einit/EinitHw-kss/ksm.module: einit/EinitHw
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/net2_with_separate_vfs_udp_modified/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EinitHw-kss/ksm.module, EinitHw-kss/security_arm.psl.audit.c"
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/einit/EinitHw-kss && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/makekss --target=arm-kos --module=-lksm_kss --base="0xC0000000" --with-cc="/opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/arm-kos-gcc" --with-cflags="-g -I/opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/include -D__KOS_KERNEL__" --with-nk="/opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/nk-psl-gen-c" --with-nkflags="-I /workspace/net2_with_separate_vfs_udp_modified/build/_headers_ -I /workspace/net2_with_separate_vfs_udp_modified/build/_headers_/client/.. -I /workspace/net2_with_separate_vfs_udp_modified/build/../install/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/arm-kos/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/include -P /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/include/system.platform -I /workspace/net2_with_separate_vfs_udp_modified/einit/src -I /opt/KasperskyOS-Community-Edition-1.0.1.4/common" --with-nktype="psl" --psl-build-type="debug" --save-audit-to="/workspace/net2_with_separate_vfs_udp_modified/build/einit/EinitHw-kss" /workspace/net2_with_separate_vfs_udp_modified/build/einit/EinitHw-kss/src/security_arm.psl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/kos_udp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EinitHw-kss/ksm.module, EinitHw-kss/security_arm.psl.audit.c"
+	cd /workspace/kos_udp/build/einit/EinitHw-kss && /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/makekss --target=arm-kos --module=-lksm_kss --base="0xC0000000" --with-cc="/opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/arm-kos-gcc" --with-cflags="-g -I/opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/include -D__KOS_KERNEL__" --with-nk="/opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/bin/nk-psl-gen-c" --with-nkflags="-I /workspace/kos_udp/build/_headers_ -I /workspace/kos_udp/build/_headers_/client/.. -I /workspace/kos_udp/build/../install/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/arm-kos/include -I /opt/KasperskyOS-Community-Edition-1.0.1.4/toolchain/include -P /opt/KasperskyOS-Community-Edition-1.0.1.4/sysroot-arm-kos/include/system.platform -I /workspace/kos_udp/einit/src -I /opt/KasperskyOS-Community-Edition-1.0.1.4/common" --with-nktype="psl" --psl-build-type="debug" --save-audit-to="/workspace/kos_udp/build/einit/EinitHw-kss" /workspace/kos_udp/build/einit/EinitHw-kss/src/security_arm.psl
 
 einit/EinitHw-kss/security_arm.psl.audit.c: einit/EinitHw-kss/ksm.module
 	@$(CMAKE_COMMAND) -E touch_nocreate einit/EinitHw-kss/security_arm.psl.audit.c
@@ -109,10 +109,10 @@ einit/CMakeFiles/kos-image.dir/build: kos-image
 .PHONY : einit/CMakeFiles/kos-image.dir/build
 
 einit/CMakeFiles/kos-image.dir/clean:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build/einit && $(CMAKE_COMMAND) -P CMakeFiles/kos-image.dir/cmake_clean.cmake
+	cd /workspace/kos_udp/build/einit && $(CMAKE_COMMAND) -P CMakeFiles/kos-image.dir/cmake_clean.cmake
 .PHONY : einit/CMakeFiles/kos-image.dir/clean
 
 einit/CMakeFiles/kos-image.dir/depend:
-	cd /workspace/net2_with_separate_vfs_udp_modified/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/net2_with_separate_vfs_udp_modified /workspace/net2_with_separate_vfs_udp_modified/einit /workspace/net2_with_separate_vfs_udp_modified/build /workspace/net2_with_separate_vfs_udp_modified/build/einit /workspace/net2_with_separate_vfs_udp_modified/build/einit/CMakeFiles/kos-image.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspace/kos_udp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/kos_udp /workspace/kos_udp/einit /workspace/kos_udp/build /workspace/kos_udp/build/einit /workspace/kos_udp/build/einit/CMakeFiles/kos-image.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : einit/CMakeFiles/kos-image.dir/depend
 
